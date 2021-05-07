@@ -22,18 +22,3 @@ class partner(models.Model):
 		c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
 		distances = R * c
-
-class inspection(models.Model):
-	_inherit = 'x_rapport'
-"""
-	clients = fields.Many2one('res.partner', 'Clients')
-	inspections = fields.Char('Itinéraire')
-
-	def ordre_clients(self):
-		i = 0
-		inspections = ""
-		while i < len(clients):
-		inspections += str(clients[i].distance) + '-->'
-		i += 1
-		self.inspections = inspections
-"""
