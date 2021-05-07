@@ -12,6 +12,40 @@
         </xpath>
       </field>
     </record>
+
+    <record id="view_distance_wizard" model="ir.ui.view">
+        <field name="name">Inspections du jours</field>
+        <field name="model">x_rapport</field>
+        <field name="arch" type="xml">
+            <form string="Inspections du jour">
+                <group col="4">
+                    <field name="client"/>
+                    <button name="ordre_clients" type="object" string="Intinéraire" class="btn-primary"/>
+                </group>
+                <footer>
+                    <field name="inspections"/>
+                    <button string="Fermer" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_distance" model="ir.actions.act_window">
+        <field name="name">Distance des clients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">x_rapport</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem 
+        name="Inspections du jour" 
+        id="inspection_du_jour" 
+        action="action_distance"
+    />
+
     
   </data>
 </odoo>
