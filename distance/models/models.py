@@ -10,8 +10,8 @@ class partner(models.Model):
 	def distance_km(self):
 		# approximate radius of earth in km
 		R = 6373.0
-		lat1 = radians(48,73681)
-		lon1 = radians(2,44753)
+		lat1 = radians(48.73681)
+		lon1 = radians(2.44753)
 		lat2 = radians(self.partner_latitude)
 		lon2 = radians(self.partner_longitude)
 
