@@ -23,6 +23,7 @@ class partner(models.Model):
 
 		distances = R * c
 
+"""
 class inspection(models.TransientModel):
 	_inherit = 'x_rapport'
 
@@ -36,3 +37,4 @@ class inspection(models.TransientModel):
 		inspections += str(clients[i].distance) + '-->'
 		i += 1
 		self.inspections = inspections
+"""
