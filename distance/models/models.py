@@ -4,10 +4,10 @@ from odoo import models, fields, api, _
 from math import sin, cos, sqrt, atan2, radians
 
 class partner(models.Model):
-    _inherit = 'res.partner'
+	_inherit = 'res.partner'
 
-    distance = fields.Float(string='Distance', compute='distance_km')
-    def distance_km(self):
+	distance = fields.Float(string='Distance', compute='distance_km')
+	def distance_km(self):
 		# approximate radius of earth in km
 		R = 6373.0
 		lat1 = radians(48.73681)
@@ -23,19 +23,16 @@ class partner(models.Model):
 
 		distances = R * c
 
-class inspection(models.Model):
+class inspection(models.TransientModel):
 	_inherit = 'x_rapport'
 
 	clients = fields.Many2one('res.partner', 'Clients')
 	inspections = fields.Char('Itinéraire')
 
-    def ordre_clients(self):
-    	i = 0
-    	inspections = ""
-    	while i < len(clients):
-    		inspections += str(clients[i].distance) + '-->'
-    		i += 1
-    	self.inspections = inspections
-
-
-
+	def ordre_clients(self):
+		i = 0
+		inspections = ""
+		while i < len(clients):
+		inspections += str(clients[i].distance) + '-->'
+		i += 1
+		self.inspections = inspections
