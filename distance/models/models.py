@@ -23,10 +23,9 @@ class partner(models.Model):
 
 		distances = R * c
 
-"""
 class inspection(models.TransientModel):
 	_inherit = 'x_rapport'
-
+"""
 	clients = fields.Many2one('res.partner', 'Clients')
 	inspections = fields.Char('Itinéraire')
 
