@@ -22,3 +22,4 @@ class partner(models.Model):
 		c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
 		distances = R * c
+		self.distance = distances
