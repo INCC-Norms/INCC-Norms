@@ -23,3 +23,5 @@ class partner(models.Model):
 
 		distances = R * c
 		self.distance = distances
+class product(models.Model)
+	_inherit = 'product.template'
