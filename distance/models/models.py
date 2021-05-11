@@ -23,3 +23,5 @@ class partner(models.Model):
 
 		distances = R * c
 		self.distance = distances
+class inspection(models.Model):
+	_inherit = 'x_rapport'
