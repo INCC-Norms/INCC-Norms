@@ -2,6 +2,10 @@
 
 from odoo import models, fields, api, _
 from math import sin, cos, sqrt, atan2, radians
+from odoo import models, fields, api, _
+import qrcode
+import base64
+from io import BytesIO
 
 class partner(models.Model):
 	_inherit = 'res.partner'
