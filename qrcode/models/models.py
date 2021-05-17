@@ -6,8 +6,7 @@ import base64
 from io import BytesIO
 		
 class Rapport(models.Model):
-	_inherit = "sale.order"
-	qr_code = fields.Binary("QR Code")
+	_inherit = "x_rapport"
 	@api.onchange('x_studio_partner_id')
 	def generate_qr_code(self):
 		qr = qrcode.QRCode(
@@ -23,4 +22,4 @@ class Rapport(models.Model):
 		temp = BytesIO()
 		img.save(temp, format="PNG")
 		qr_image = base64.b64encode(temp.getvalue())
-		self.qr_code = qr_image
+		self.x_qr_code = qr_image
