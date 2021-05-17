@@ -22,4 +22,4 @@ class Rapport(models.Model):
 		temp = BytesIO()
 		img.save(temp, format="PNG")
 		qr_image = base64.b64encode(temp.getvalue())
-		self.x_qr_code = qr_image
+		self.qr_code = qr_image
