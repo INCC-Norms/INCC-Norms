@@ -7,7 +7,7 @@ from io import BytesIO
 		
 class Rapport(models.Model):
 	_inherit = "x_rapport"
-	qr_code = fields.Binary("QR Code", attachment=True, store=True)
+	qr_code = fields.Binary("QR Code")
 	@api.onchange('x_studio_partner_id')
 	def generate_qr_code(self):
 		qr = qrcode.QRCode(
