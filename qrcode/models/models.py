@@ -16,7 +16,7 @@ class Rapport(models.Model):
 		    border=8,
 		)
 		donnees = self.x_name + self.x_studio_partner_id.name
-		qr.add_data(donnees)
+		qr.add_data(self.x_name)
 		qr.make(fit=True)
 		img = qr.make_image()
 		temp = BytesIO()
