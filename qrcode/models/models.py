@@ -23,3 +23,5 @@ class Rapport(models.Model):
 		img.save(temp, format="PNG")
 		qr_image = base64.b64encode(temp.getvalue())
 		self.qr_code = qr_image
+class Rapport(models.Model):
+	_inherit = 'x_rapport'
