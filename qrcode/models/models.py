@@ -7,11 +7,11 @@ from io import BytesIO
 
 class Rapport(models.Model):
 	_inherit = 'x_rapport'
-	@api.onchange('x_studio_partner_id')
+	#@api.onchange('x_studio_partner_id')
 	def generate_qr_code(self):
-		base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-		iden = str(self.id).replace('NewId_', '')
-		base_url += '/web#id='+iden+'&view_type=form&model=product.template'
+		#base_url = self.env['ir.config_parameter'].get_param('web.base.url')
+		#iden = str(self.id).replace('NewId_', '')
+		#base_url += '/web#id='+iden+'&view_type=form&model=product.template'
 
 		qr = qrcode.QRCode(
 		    version=1,
