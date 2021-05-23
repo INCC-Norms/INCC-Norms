@@ -9,7 +9,7 @@ class Rapport(models.Model):
 	qr_code = fields.Binary("QR Code", attachment=True, store=True)
 	client_id = fields.Many2one('res.partner', )
 	
-	api.onchange('client_id')
+	#api.onchange('client_id')
 	def generate_qr_code(self):
 		base_url = self.env['ir.config_parameter'].get_param('web.base.url')
 		iden = str(self.id).replace('NewId_', '')
