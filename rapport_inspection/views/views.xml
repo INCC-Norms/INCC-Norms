@@ -1,0 +1,59 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="rapport_inspection.list">
+      <field name="name">rapport_inspection list</field>
+      <field name="model">rapport_inspection.rapport_inspection</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="rapport_inspection.action_window">
+      <field name="name">rapport_inspection window</field>
+      <field name="res_model">rapport_inspection.rapport_inspection</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="rapport_inspection.action_server">
+      <field name="name">rapport_inspection server</field>
+      <field name="model_id" ref="model_rapport_inspection_rapport_inspection"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="rapport_inspection" id="rapport_inspection.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="rapport_inspection.menu_1" parent="rapport_inspection.menu_root"/>
+    <menuitem name="Menu 2" id="rapport_inspection.menu_2" parent="rapport_inspection.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="rapport_inspection.menu_1_list" parent="rapport_inspection.menu_1"
+              action="rapport_inspection.action_window"/>
+    <menuitem name="Server to list" id="rapport_inspection" parent="rapport_inspection.menu_2"
+              action="rapport_inspection.action_server"/>
+    -->
+  </data>
+</openerp>
