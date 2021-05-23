@@ -7,7 +7,6 @@ from io import BytesIO
 
 class Rapport(models.Model):
 	_inherit = 'x_rapport'
-	"""
 	@api.onchange('x_studio_partner_id')
 	def generate_qr_code(self):
 		base_url = self.env['ir.config_parameter'].get_param('web.base.url')
@@ -27,4 +26,3 @@ class Rapport(models.Model):
 		img.save(temp, format="PNG")
 		qr_image = base64.b64encode(temp.getvalue())
 		self.x_qr_code = qr_image
-	"""
