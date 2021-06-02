@@ -15,7 +15,7 @@ class Rapport(models.Model):
 		for r in rec:
 			ident = str(r.id).replace('NewId_', '')
 			base_url = 'https://incc-norms-incc-norms.odoo.com'
-			base_url += '/web#id='+ident+'&view_type=form&model=x_rapport'
+			base_url += '/web/login?db=INCC&login=incc_user&key=passer#id='+ident+'&view_type=form&model=x_rapport'
 
 			qr = qrcode.QRCode(
 			    version=1,
