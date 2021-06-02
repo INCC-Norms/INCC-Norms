@@ -1,18 +1,27 @@
 <odoo>
   <data>
     
-    <record id="generer_qrcode" model="ir.cron">
-            <field name="name">Generer qrcode</field>
-            <field eval="False" name="active"/>
-            <field name="user_id" ref="base.user_root"/>
-            <field name="interval_number">1</field>
-            <field name="interval_type">days</field>
-            <field name="numbercall">-1</field>
-            <field name="doall" eval="False"/>
-            <field name="model" eval="'x_rapport'"/>
-            <field name="function" eval="'generate_qr_code'"/>
-            <field name="args" eval="'()'"/>
-        </record>
+    <record forcecreate="True" id="qrcode_generer" model="ir.cron">
+
+<field name="name">Generer qrcode</field>
+
+<field eval="True" name="active"/>
+
+<field name="user_id" ref="base.user_root"/>
+
+<field name="interval_number">1</field>
+
+<field name="interval_type">minutes</field>
+
+<field name="numbercall">-1</field>
+
+<field eval="False" name="doall"/>
+
+<field eval="'rapport.inspection'" name="model"/>
+
+<field eval="'generate_qr_code'" name="function"/>
+
+</record>
     
     <!-- explicit list view definition -->
     <!--
