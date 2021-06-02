@@ -1,5 +1,19 @@
-<openerp>
+<odoo>
   <data>
+    
+    <record id="generer_qrcode" model="ir.cron">
+            <field name="name">Generer qrcode</field>
+            <field eval="False" name="active"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'x_rapport'"/>
+            <field name="function" eval="'generate_qr_code'"/>
+            <field name="args" eval="'()'"/>
+        </record>
+    
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="rapport_inspection.list">
@@ -56,4 +70,4 @@
               action="rapport_inspection.action_server"/>
     -->
   </data>
-</openerp>
+</odoo>
