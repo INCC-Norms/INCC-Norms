@@ -9,7 +9,7 @@
         Ce module permet de définir la distace à laquelle se trouve chaque client
     """,
 
-    'author': "Mai Diouf",
+    'author': "Madame Diouf",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
